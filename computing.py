@@ -20,28 +20,28 @@ def plot_gc_content(dna):
     labels=list(gc_data.keys())
     values=list(gc_data.values())
     
-    plt.figure(bitsize=(6,4))
+    plt.figure(figsize=(6,4))
     bars=plt.bar(labels,values)
     
-    bars[0].set_colour('green')
-    bars[1].set_colour('blue')
-    bars[2].set_colour('violet')
+    bars[0].set_color('green')
+    bars[1].set_color('blue')
+    bars[2].set_color('violet')
     
-    plt.title("GC Content analysis of DNA sequence",fonts=14)
-    plt.label("Percentage(%)", fonts=12)
-    plt.lim(0, 100)
+    plt.title("GC Content analysis of DNA sequence",fontsize=14)
+    plt.label("Percentage(%)", fontsize=12)
+    plt.ylim(0, 100)
     
     # Add value labels above bars
     for bar in bars:
         height = bar.get_height()
-        plt.text(bar.get_x() + bar.get_width()/2, height + 1, f'{height:.2f}%', ha='center', va='bottom', fonts=10)
+        plt.text(bar.get_x() + bar.get_width()/2, height + 1, f'{height:.2f}%', ha='center', va='bottom', fontsize=10)
 
     plt.tight_layout()
     plt.show()
 
 
 # Example DNA sequence
-dna_sequence = "AGCTATAGCGGCGC"
+dna_sequence = "AGCTATAGCGGCGCAGCGTGACGTGA"
 plot_gc_content(dna_sequence)
     
 
