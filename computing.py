@@ -28,7 +28,7 @@ def plot_gc_content(dna):
     bars[2].set_color('violet')
     
     plt.title("GC Content analysis of DNA sequence",fontsize=14)
-    plt.label("Percentage(%)", fontsize=12)
+    plt.ylabel("Percentage(%)", fontsize=12)
     plt.ylim(0, 100)
     
     # Add value labels above bars
